@@ -2,5 +2,12 @@ from django.db import models
 
 
 class City(models.Model):
-    name = models.CharField(50)
-    slug = models.CharField(50, blank=True)
+    name = models.CharField(max_length=50, verbose_name='Название города')
+    slug = models.CharField(max_length=50, blank=True)
+    
+    class Meta:
+        verbose_name = 'Название города'
+        verbose_name_plural = 'Название городов'
+
+    def __str__(self):
+        return self.name
