@@ -11,8 +11,10 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
-
+    {% for obj in object_list %}
+      <p><a href="{{obj.url}}">{{obj.title}}</a></p>
+      <p>{{obj.description}}</p>
+    {% endfor %}
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
